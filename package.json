@@ -1,0 +1,15 @@
+{
+  "name": "do-not-cache",
+  "version": "0.0.0",
+  "description": "set HTTP response headers to prevent caching",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "kemitchell/do-not-cache.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "defence README.md | replace-require-self | node"
+  },
+  "devDependencies": {
+    "defence-cli": "^2.0.0",
+    "replace-require-self": "^1.1.1"
+  }
+}
