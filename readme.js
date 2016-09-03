@@ -1,4 +1,4 @@
-```javascript
+
 var assert = require('assert')
 var http = require('http')
 
@@ -19,27 +19,53 @@ http.createServer()
     var headers = response.headers
     receivedResponse = true
     // RFC 1945 (HTTP 1.0)
-    assert(headers['pragma'] === 'no-cache') // Section 10.12
-    assert(headers['expires'] === '0') // 10.7
+    assert.equal(headers['pragma'], 'no-cache') // Section 10.12
+    assert.equal(headers['expires'], '0') // 10.7
     // RFC 2616 (HTTP 1.1)
-    assert(
-      headers['cache-control']
-      .includes('no-cache')
-    ) // Section 14.9.1
-    assert(
-      headers['cache-control']
-      .includes('no-store')
-    ) // 14.9.2
-    assert(
-      headers['cache-control']
-      .includes('must-revalidate')
-    ) // 14.9.4
+    assert(headers['cache-control'].includes('no-cache')) // Section 14.9.1
+    assert(headers['cache-control'].includes('no-store')) // 14.9.2
+    assert(headers['cache-control'].includes('must-revalidate')) // 14.9.4
     server.close()
   })
   .end()
 })
 
 process.on('exit', function () {
-  assert(receivedResponse === true)
+  assert.equal(receivedResponse, true)
+  console.log('Tests passed')
 })
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
