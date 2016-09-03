@@ -1,7 +1,7 @@
 {
   "name": "do-not-cache",
   "description": "set HTTP response headers to prevent caching",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
     "defence-cli": "^2.0.0",
